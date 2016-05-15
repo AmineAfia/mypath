@@ -1,0 +1,32 @@
+<md-sidenav-layout fullscreen>
+  
+  <md-sidenav #sidenav> 
+    <md-nav-list>
+      <a md-list-item [routerLink]="['/paths']" (click)="sidenav.close()">
+        <md-icon md-list-icon>lightbulb_outline</md-icon>
+        <span md-line>Paths</span>
+        <span md-line class="secondary">click to see available paths</span>
+      </a>
+      <a md-list-item [routerLink]="['/about']" (click)="sidenav.close()">
+        <md-icon md-list-icon>sentiment_satisfied</md-icon>
+        <span md-line>About</span>
+        <span md-line class="secondary">About the app!</span>
+      </a>
+      <a md-list-item [routerLink]="['/path-graph']" (click)="sidenav.close()">
+        <md-icon md-list-icon>add</md-icon>
+        <span md-line>Graph</span>
+        <span md-line class="secondary">see your progress</span>
+      </a>
+    </md-nav-list>
+    
+  </md-sidenav>
+  
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+    My Path
+  </md-toolbar>
+  
+    <router-outlet></router-outlet>
+</md-sidenav-layout>
